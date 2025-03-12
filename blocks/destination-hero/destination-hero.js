@@ -5,7 +5,7 @@ export default function decorate(block) {
 
   [...block.children].forEach((row) => {
     // console.log(row.children)
-    console.log('---');
+    //  console.log('---');
 
     const ch = row.children;
     const elType = ch[0];
@@ -14,23 +14,23 @@ export default function decorate(block) {
 
     switch (elType.innerText) {
       case 'Name':
-        console.log('is title');
+        // console.log('is title');
         el.className += ' hero-block-title';
         break;
 
       case 'Image':
-        console.log('is image');
+        // console.log('is image');
         el.className += ' hero-block-image';
         break;
 
       case 'Data':
-        console.log('is data');
+        // console.log('is data');
         el.className += ' hero-block-data';
         heroBlockData = JSON.parse(el.querySelector('code').innerText);
         break;
 
       default:
-        console.log('unknown');
+        // console.log('unknown');
         el.className += ' hero-block-meta';
         break;
     }

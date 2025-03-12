@@ -165,6 +165,13 @@ export default async function decorate(block) {
   block.append(navWrapper);
 }
 
+// add Adobe Launch to site
+const tms = document.createElement('script');
+tms.setAttribute('src', 'https://assets.adobedtm.com/d9fe0ea961b4/b9e6750a121a/launch-77eb5a088b88-development.min.js');
+tms.setAttribute('async', '');
+tms.setAttribute('defer', '');
+document.querySelector('head').append(tms);
+
 // add data layer object in header
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
