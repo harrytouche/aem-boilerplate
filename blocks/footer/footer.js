@@ -18,3 +18,7 @@ export default async function decorate(block) {
 
   block.append(footer);
 }
+
+console.log('--- DataLayer Log Start ---');
+console.log(JSON.stringify(window.dataLayer, null, 4));
+console.log('---- DataLayer Log End ----');

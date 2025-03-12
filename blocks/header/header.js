@@ -164,3 +164,11 @@ export default async function decorate(block) {
   navWrapper.append(nav);
   block.append(navWrapper);
 }
+
+// add data layer object in header
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  pageData: {
+    hello: 'world',
+  },
+});
