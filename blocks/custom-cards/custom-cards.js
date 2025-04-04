@@ -41,5 +41,5 @@ export default function decorate(block) {
   block.append(ul);
 
   window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({ 'custom-cards-data': customCardsData });
+  window.dataLayer.push({ customCards: customCardsData });
 }
