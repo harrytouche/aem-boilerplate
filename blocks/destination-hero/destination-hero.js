@@ -49,5 +49,5 @@ export default function decorate(block) {
   });
 
   window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({ 'hero-block-data': heroBlockData });
+  window.dataLayer.push({ destinationHero: heroBlockData });
 }
