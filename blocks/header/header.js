@@ -1,4 +1,4 @@
-import { getMetadata } from '../../scripts/aem.js';
+import { getMetadata, toCamelCase } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 // media query match that indicates mobile/tablet width
@@ -172,10 +172,16 @@ tms.setAttribute('async', '');
 tms.setAttribute('defer', '');
 document.querySelector('head').append(tms);
 
-// add data layer object in header
+// add data layer object in header and loop through metadata box in page
+// getting the 'Title' attribute doesn't seem to work, but is the same as document.title
+const metaKeys = ['Title', 'Description', 'Lorem', 'Page Title', 'Page Template'];
+const pageData = {
+  hello: 'world',
+};
+for (let i = 0; i < metaKeys.length; i += 1) {
+  const metaKey = toCamelCase(metaKeys[i]);
+  const formattedKey = metaKeys[i].toLowerCase().replaceAll(' ', '-');
+  pageData[metaKey] = getMetadata(formattedKey);
+}
 window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
-  pageData: {
-    hello: 'world',
-  },
-});
+window.dataLayer.push({ pageData });
