@@ -141,7 +141,7 @@ async function getAndApplyRenderDecisions() {
   });
 
   // Reporting is deferred to avoid long tasks
-  /*
+  
   window.setTimeout(() => {
     // Report shown decisions
     window.alloy('sendEvent', {
@@ -153,7 +153,6 @@ async function getAndApplyRenderDecisions() {
       },
     });
   });
-  */
 }
 
 const alloyLoadedPromise = initWebSDK('./alloy.js', {
