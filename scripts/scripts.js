@@ -161,7 +161,7 @@ const alloyLoadedPromise = initWebSDK('./alloy.js', {
   orgId: '081C1EAC64EE1E270A495FF9@AdobeOrg',
   edgeConfigOverrides: {
     com_adobe_target: {
-      propertyToken: '77d5ddc4-8d49-d742-7a93-4d8be715de24',
+      propertyToken: '3263753a-f00c-d916-37fe-0b99ac01a6b3',
     },
     com_adobe_experience_platform: {
       datasets: {
