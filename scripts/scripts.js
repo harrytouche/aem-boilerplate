@@ -141,6 +141,7 @@ async function getAndApplyRenderDecisions() {
   });
 
   // Reporting is deferred to avoid long tasks
+  /*
   window.setTimeout(() => {
     // Report shown decisions
     window.alloy('sendEvent', {
@@ -152,11 +153,11 @@ async function getAndApplyRenderDecisions() {
       },
     });
   });
+  */
 }
 
 const alloyLoadedPromise = initWebSDK('./alloy.js', {
   datastreamId: 'b2907cd3-d7f6-4a01-841b-457c98908d2e',
-  //edgeConfigId: 'b2907cd3-d7f6-4a01-841b-457c98908d2e',
   orgId: '081C1EAC64EE1E270A495FF9@AdobeOrg',
 });
 if (getMetadata('target')) {
