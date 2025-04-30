@@ -2,6 +2,7 @@ import { toCamelCase } from '../../scripts/aem.js';
 
 export default function decorate(block) {
   const heroBlockData = {};
+  block.id = 'destination-hero';
 
   [...block.children].forEach((row) => {
     // console.log(row.children)
