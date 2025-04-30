@@ -8,6 +8,9 @@
  * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
+ * 
+ * https://cdn1.adoberesources.net/alloy/2.26.0/alloy.min.js
+ * 
  */
 
 !function () {
