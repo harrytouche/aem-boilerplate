@@ -167,10 +167,10 @@ export default async function decorate(block) {
 
 // add Adobe Launch to site
 const tms = document.createElement('script');
-tms.setAttribute('src', 'https://assets.adobedtm.com/d9fe0ea961b4/b9e6750a121a/launch-77eb5a088b88-development.min.js');
+tms.setAttribute('src', getMetadata('launch'));
 tms.setAttribute('async', '');
 tms.setAttribute('defer', '');
-//document.querySelector('head').append(tms);
+document.querySelector('head').append(tms);
 
 // add data layer object in header and loop through metadata box in page
 // getting the 'Title' attribute doesn't seem to work, but is the same as document.title
@@ -184,4 +184,7 @@ for (let i = 0; i < metaKeys.length; i += 1) {
   pageData[metaKey] = getMetadata(formattedKey);
 }
 window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({ pageData });
+window.dataLayer.push({ event: 'gtm.load', pageData });
+
+// cookie to fire rules via launch
+document.cookie = 'OptanonConsent=isGpcEnabled=0&datestamp=Thu+May+01+2025+09%3A24%3A15+GMT%2B0100+(British+Summer+Time)&version=202402.1.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=69530fd1-74ac-4075-94e4-bdc471dfcf0a&interactionCount=1&isAnonUser=1&landingPath=NotLandingPage&groups=C0001%3A1%2CC0002%3A1%2CC0003%3A1%2CC0004%3A1%2CC0007%3A1&geolocation=GB%3BENG&AwaitingReconsent=false'
