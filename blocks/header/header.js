@@ -177,6 +177,7 @@ document.querySelector('head').append(tms);
 const metaKeys = ['Title', 'Description', 'Lorem', 'Page Title', 'Page Template'];
 const pageData = {
   hello: 'world',
+  isEDS: true,
 };
 for (let i = 0; i < metaKeys.length; i += 1) {
   const metaKey = toCamelCase(metaKeys[i]);
@@ -187,4 +188,4 @@ window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({ event: 'gtm.load', pageData });
 
 // cookie to fire rules via launch
-document.cookie = 'OptanonConsent=isGpcEnabled=0&datestamp=Thu+May+01+2025+09%3A24%3A15+GMT%2B0100+(British+Summer+Time)&version=202402.1.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=69530fd1-74ac-4075-94e4-bdc471dfcf0a&interactionCount=1&isAnonUser=1&landingPath=NotLandingPage&groups=C0001%3A1%2CC0002%3A1%2CC0003%3A1%2CC0004%3A1%2CC0007%3A1&geolocation=GB%3BENG&AwaitingReconsent=false'
+document.cookie = 'OptanonConsent=isGpcEnabled=0&datestamp=Thu+May+01+2025+09%3A24%3A15+GMT%2B0100+(British+Summer+Time)&version=202402.1.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=69530fd1-74ac-4075-94e4-bdc471dfcf0a&interactionCount=1&isAnonUser=1&landingPath=NotLandingPage&groups=C0001%3A1%2CC0002%3A1%2CC0003%3A1%2CC0004%3A1%2CC0007%3A1&geolocation=GB%3BENG&AwaitingReconsent=false';

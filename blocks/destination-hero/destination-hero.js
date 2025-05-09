@@ -24,6 +24,7 @@ export default function decorate(block) {
         heroBlockData[dataKey] = dataValue;
 
         el.className += ' hero-block-title';
+        el.id = 'hero-block-title';
         block.append(el);
         break;
 
@@ -31,6 +32,7 @@ export default function decorate(block) {
 
         // console.log('is image');
         el.className += ' hero-block-image';
+        el.id = 'hero-block-image';
         block.append(el);
         break;
 
